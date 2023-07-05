@@ -25,13 +25,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     SingleLiftComponent,
     FloorComponent,
-    FloorsComponentComponent,
+    // FloorsComponentComponent,
     RegformComponent,
     PopUpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
