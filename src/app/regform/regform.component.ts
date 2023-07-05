@@ -15,9 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrls: ['./regform.component.css'],
 })
 export class RegformComponent {
-  name: any;
-  officename: any;
-  contactno: any;
+ 
 
   addRegForm = this.fb.group({
     name: ['', Validators.required],
@@ -26,6 +24,16 @@ export class RegformComponent {
   });
 
   constructor(private fb: FormBuilder,public dialog: MatDialog) {}
+
+  get name() {
+    return this.addRegForm.get('name');
+  }
+  get officename() {
+    return this.addRegForm.get('officename');
+  }
+  get contactno() {
+    return this.addRegForm.get('contactno');
+  }
 
   onSubmit(
 
