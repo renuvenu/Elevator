@@ -24,5 +24,7 @@ export class RegformComponent {
 
   constructor(private fb: FormBuilder) {}
 
-  onSubmit() {}
+  onSubmit(
+    
+  ) {}
 }
