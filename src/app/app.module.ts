@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SingleLiftComponent } from './single-lift/single-lift.component';
-import { FloorComponent } from './floor/floor.component';
-import { FloorsComponentComponent } from './floors-component/floors-component.component';
+// import { SingleLiftComponent } from './single-lift/single-lift.component';
+// import { FloorComponent } from './floor/floor.component';
+// import { FloorsComponentComponent } from './floors-component/floors-component.component';
 import { RegformComponent } from './regform/regform.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatButtonModule } from '@angular/material/button';
 // import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,16 +23,16 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    SingleLiftComponent,
-    FloorComponent,
+    // SingleLiftComponent,
+    // FloorComponent,
     // FloorsComponentComponent,
     RegformComponent,
     PopUpComponent
   ],
   imports: [
-    BrowserModule,
+    // BrowserModule,
     // AppRoutingModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     // FormsModule,
     // ReactiveFormsModule,
     // MatButtonModule,
