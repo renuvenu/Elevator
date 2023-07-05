@@ -8,16 +8,29 @@ import { FloorComponent } from './floor/floor.component';
 import { FloorsComponentComponent } from './floors-component/floors-component.component';
 import { FloorNumberButtonComponent } from './floor-number-button/floor-number-button.component';
 import { FormsComponent } from './forms/forms.component';
+// import { HttpClientModule } from '@angular/common/http';
+// import { MatCardModule } from '@angular/material/card';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+// import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatButtonModule } from '@angular/material/button';
+import { RegformComponent } from './regform/regform.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDividerModule } from '@angular/material/divider';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 @NgModule({
   declarations: [
@@ -27,6 +40,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FloorsComponentComponent,
     FloorNumberButtonComponent,
     FormsComponent,
+    UserDetailComponent,
+    FloorsComponentComponent,
+    RegformComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +59,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatToolbarModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatIconModule,
+    MatDialogModule, 
+    MatDialogModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
