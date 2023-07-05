@@ -31,6 +31,8 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { UserHistoryComponent } from './user-history/user-history.component';
+import { HistoryCardComponent } from './history-card/history-card.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
     UserDetailComponent,
     FloorsComponentComponent,
     RegformComponent,
-    PopUpComponent
+    PopUpComponent,
+    UserHistoryComponent,
+    HistoryCardComponent
   ],
   imports: [
     BrowserModule,

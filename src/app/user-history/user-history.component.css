@@ -1,0 +1,12 @@
+.search-form {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    max-width: 400px;
+    padding-top:20px;
+    margin: 0 auto;
+  }
+
+  
+ 
+  

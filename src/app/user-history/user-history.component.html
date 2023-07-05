@@ -1,0 +1,28 @@
+<form [formGroup]="searchForm" class="search-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Enter user Id to view the History"
+      formControlName="userId"
+    />
+    <mat-error *ngIf="userid?.errors?.['required']">
+    </mat-error>
+  </mat-form-field>
+  <button
+  mat-raised-button
+  color="primary"
+  type="submit"
+  [disabled]="searchForm.invalid" (click)="searchuserHistory()"
+>
+  Search
+</button>
+
+</form>
+<div class="movie-list-container">
+  <app-history-card
+    *ngFor="let dt of searchResult"
+    [userhistory]="dt"
+  ></app-history-card>
+</div>
