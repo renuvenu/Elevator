@@ -5,6 +5,9 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from '../pop-up/pop-up.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-regform',
@@ -22,9 +25,14 @@ export class RegformComponent {
     contactno: ['', [Validators.required]],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,public dialog: MatDialog) {}
 
   onSubmit(
-    
+
   ) {}
+
+  openDialog() {
+    this.dialog.open(PopUpComponent);
+  }
+  
 }

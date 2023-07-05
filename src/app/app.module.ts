@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { MatDividerModule } from '@angular/material/divider';
     SingleLiftComponent,
     FloorComponent,
     FloorsComponentComponent,
-    RegformComponent
+    RegformComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,9 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
+    MatDialogModule, 
+    MatDialogModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
