@@ -1,0 +1,28 @@
+<div class="forms">
+    <div class="floorNumbers">
+        <div *ngFor="let item of createRange()">
+            <app-floor-number-button [floorNumber]="item"> </app-floor-number-button>
+        </div>
+    </div>
+    <div class="ButtonFunctions">
+        <button>
+            <mat-icon style="color: red ;">alarm</mat-icon>
+        </button>
+        <button>
+            <mat-icon style="color: blue;">phone</mat-icon>
+        </button>
+        <button style="color: brown;">
+            Non stop
+        </button>
+    </div>
+    <div class="OpenCloseButton">
+        <button>
+            <mat-icon style="color: green;">arrow_left</mat-icon>
+            <mat-icon style="color:green"> arrow_right</mat-icon>
+        </button>
+        <button>
+            <mat-icon style="color: green;"> arrow_right</mat-icon>
+            <mat-icon style="color: green;">arrow_left</mat-icon>
+        </button>
+    </div>
+</div>
