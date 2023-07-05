@@ -1,6 +1,91 @@
+.lift {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .container {
     width: 130px;
     height: 130px;
+    background-color: rgb(63, 63, 148);
+    border: 2px solid black;
+    /* transition: transform 4s ease-in-out; */
+    /* transform: transform 4s ease-in; */
+
+} 
+
+.door {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    /* transform: translateY(133px); */
+}
+
+.door-left {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid red;
     background-color: black;
-    border: 2px solid gray;
+}
+
+.door-right {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid red;
+    background-color: black;
+}
+
+.door-left-transition {
+    transform-origin: left;
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+.door-right-transition {
+    transform-origin: right;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+}
+
+.door-left-close {
+    /* transform-origin: left; */
+    right: 0;
+    transform: rotateY(0 deg);
+    transition: transform 0.7s ease-in;
+}
+
+.door-right-close {
+    /* transform-origin: right; */
+    left: 0;
+    transform: rotateY(0 deg);
+    transition: transform 0.7s ease-in;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+button {
+    background-color: white;
+    border: 0px;
+    border-radius: 50%;
+}
+
+button :active {
+    /* background-color: rgb(206, 188, 188);
+    transition: opacity 0.5s; */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.lift-button {
+    /* width: 80px;
+    height: 80px; */
+    object-fit: contain;
+    border-radius: 50%;
 }
