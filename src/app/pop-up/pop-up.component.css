@@ -1,0 +1,23 @@
+.pop-up
+{
+    width: 300px;
+    height: 300px;
+   
+}
+.title{
+   
+    /* left: 85px; */
+    padding: 20px;
+    padding-left: 110px;
+}
+
+.id
+{
+    padding: 20px;
+    padding-left: 80px;
+}
+.close
+{
+    justify-content: center;
+
+}
