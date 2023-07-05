@@ -1,5 +1,5 @@
 <div class="floor-container">
   <ng-container *ngFor="let i of arr">
-    <app-floor></app-floor>
+    <app-floor [floornum]="i" [lastFloor]="arr[arr.length - 1]"></app-floor>
   </ng-container>
 </div>
