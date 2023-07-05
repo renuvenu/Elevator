@@ -13,7 +13,7 @@
 
     <mat-form-field class="example-full-width">
       <mat-label>Office Name</mat-label>
-      <input type="text" matInput placeholder="Office Name" formControlName="officename" />
+      <input type="text" matInput placeholder="Office Name" formControlName="officeName" />
       <mat-error *ngIf="officename?.errors?.['required']">
         Office Name is required?
       </mat-error>
@@ -23,7 +23,7 @@
 
     <mat-form-field class="example-full-width">
         <mat-label>Contact Number</mat-label>
-        <input type="text" matInput placeholder="Contact Number" formControlName="contactno" />
+        <input type="text" matInput placeholder="Contact Number" formControlName="contactNumber" />
         <mat-error *ngIf="contactno?.errors?.['required']">
           Contact Number is required?
         </mat-error>

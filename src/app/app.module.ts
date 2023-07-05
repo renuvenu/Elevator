@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatDialogModule, 
     MatDialogModule,
+    HttpClientModule,
 
   ],
   providers: [],
