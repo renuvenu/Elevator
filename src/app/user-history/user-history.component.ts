@@ -27,7 +27,7 @@ export class UserHistoryComponent {
   searchuserHistory() {
     const userId = this.searchForm.get('userId')?.value;
     if (userId) {
-      this.http.get<any[]>(`https://localhost:7160/api/PersonDetailsInLift/user/${userId}`)
+      this.http.get<any[]>(`https://team2-api-naf.azurewebsites.net/api/PersonDetailsInLift/user/${userId}`)
         .subscribe(data => {       
           this.searchResult = data;
           this.searchHistory=this.searchResult.personDetails;

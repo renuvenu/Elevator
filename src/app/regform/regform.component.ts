@@ -37,25 +37,9 @@ export class RegformComponent {
     return this.addRegForm.get('contactNumber');
   }
 
-  // onSubmit()
-  // {
-  //   this.http
-
-  //     .post(`https://localhost:7160/api/person`, this.addRegForm.value)
-
-  //     .subscribe(data => {
-
-  //       this.values = data;
-
-  //        this.user_Id= this.values.userId;  
-
-
-  //     });
-  // }
-
 
   onSubmit() {
-    this.http.post(`https://localhost:7160/api/person`, this.addRegForm.value)
+    this.http.post(`https://team2-api-naf.azurewebsites.net/api/person`, this.addRegForm.value)
       .subscribe(data => {
         this.values = data;
         this.user_Id = this.values.userId;
