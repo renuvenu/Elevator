@@ -47,7 +47,7 @@ export class FloorsComponentComponent {
         this.showLogin = true;
         this.toFloor = this.fromFloor;
       } else {
-        this.dialog.open(WeightLimitExceededPopupComponent)
+         this.dialog.open(WeightLimitExceededPopupComponent)
         this.showCapacityExceededPopup = true;
       }
     });

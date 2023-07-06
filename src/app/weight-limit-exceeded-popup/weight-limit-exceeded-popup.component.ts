@@ -14,11 +14,10 @@ export class WeightLimitExceededPopupComponent {
     private router: Router,
     private dialog: MatDialog
   ) {}
+
   goToLift() {
     this.router.navigate(['/lift']);
   }
 
-  // ngOnInit() {
-  //   this.dialog.open(WeightLimitExceededPopupComponent, {});
-  // }
+ 
 }
