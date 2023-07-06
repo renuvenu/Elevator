@@ -5,6 +5,7 @@ import { FormsComponent } from './forms/forms.component';
 import { RegformComponent } from './regform/regform.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserHistoryComponent } from './user-history/user-history.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'history',
     component:UserHistoryComponent
+  },
+  {
+    path:'admin',
+    component:AdminComponent
   }
   
 ];

@@ -17,4 +17,7 @@ goToHistory(){
 goToRegister(){
   this.router.navigate(['/register'])
 }
+goToAdmin(){
+  this.router.navigate(['/admin'])
+}
 }
