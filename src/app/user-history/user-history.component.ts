@@ -12,9 +12,11 @@ export class UserHistoryComponent {
   searchResult: any; 
   userName:any 
   searchHistory:any
+  isSearch: boolean=false
   
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
+    
     this.searchForm = this.fb.group({
       userId: ['',Validators.required]
     });
@@ -24,7 +26,9 @@ export class UserHistoryComponent {
   }
 
 
-  searchuserHistory() {
+  searchuserHistory(issearch:boolean) {
+      this.isSearch=issearch;
+     console.log(this.isSearch)
     const userId = this.searchForm.get('userId')?.value;
     if (userId) {
       this.http.get<any[]>(`https://team2-api-naf.azurewebsites.net/api/PersonDetailsInLift/user/${userId}`)
