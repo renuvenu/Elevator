@@ -18,6 +18,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     FloorNumberButtonComponent,
     FormsComponent,
     UserDetailComponent,
+    InvalidBoxComponent,
+    
   ],
   imports: [
     BrowserModule,

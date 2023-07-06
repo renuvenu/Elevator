@@ -6,7 +6,7 @@
     flex-direction: column;
     border-radius: 20px;
     width: 300px;
-    height: 200px;
+    height: 250px;
     position: relative;
     top: 30%;
     left: 50%;
@@ -15,7 +15,7 @@
 }
 
 .custom-button {
-    background-color: rgb(79, 0, 139);
+    /* background-color: rgb(79, 0, 139); */
     color: white;
   }
   /* .custom-input {
@@ -30,24 +30,24 @@
     font-size: 6px;
   }
   .close {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color:rgb(170, 7, 7);
+    background-color:rgb(226, 58, 58);
     display: flex;
     align-items: center;
   justify-content: center;
+   cursor: pointer;
+   transform: translate(55%, 10%);
    }
   
   .cross-icon {
     color: #fff;
     font-size: 24px;
-    
+    transform: translate(25%, -1%);
   }
 
-  .alignbutton{
-   
-  }
+  
   .content{
     top:0%;
     right: 0%;

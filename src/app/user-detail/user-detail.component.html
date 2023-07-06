@@ -3,7 +3,7 @@
    <div class="content">
     
     <div class="close" >
-        <mat-icon class="cross-icon"> close</mat-icon>
+       <button mat-button><mat-icon class="cross-icon"> close</mat-icon></button> 
             
        </div> </div> 
     <mat-form-field class="example-full-width" class="custom-form-field">
@@ -16,8 +16,8 @@
   </mat-form-field>
 <br>
  <button mat-raised-button color="primary"  [disabled]="nameForm.invalid" >Submit</button>
- <p style="color:blue;font-size: small;">New User?</p>
-
+ <br>
+ <button mat-button class="custom-button" style="color: blue;">New User?</button>
 
 </form>
    
