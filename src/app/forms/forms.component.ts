@@ -45,6 +45,7 @@ export class FormsComponent {
   phoneBackgroundColour: string = 'white';
 
   togglephoneSelection() {
+    
     if (this.phoneBackgroundColour == 'white') {
       this.phoneBackgroundColour = 'lightgreen';
     } else {
