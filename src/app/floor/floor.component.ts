@@ -41,8 +41,14 @@ export class FloorComponent {
     door.style.transitionDuration = '2s';
     if(this.floor<num) {
       door.style.transform = `translateY(-${(num - 1) * 133}px)`;
-    } else {
+    } else if(this.floor>num) {
       door.style.transform = `translateY(${(num-1) * 133}px)`;
+    }
+    else {
+      this.toggleLift()
+      setTimeout(()=>{
+        this.toggleLift()
+      },2000)
     }
     setTimeout(()=>{
       this.updateFloor.emit(num)
