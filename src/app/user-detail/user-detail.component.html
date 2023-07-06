@@ -1,6 +1,6 @@
 <form class="user" [formGroup]="nameForm" (ngSubmit)="validateUser()">
   <div class="content">
-    <div class="close">
+    <div class="close" (click)="onClosing($event)">
      <button mat-button> <mat-icon class="cross-icon"> close</mat-icon></button>
     </div>
   </div>

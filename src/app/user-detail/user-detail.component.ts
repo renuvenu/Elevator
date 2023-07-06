@@ -24,6 +24,7 @@ export class UserDetailComponent {
   userDetail: any;
   constructor(private fb: FormBuilder, private personService: PersonService,private router: Router, private route: ActivatedRoute) {}
   @Output() toggleVerification: EventEmitter<any> = new EventEmitter();
+  @Output() closeLogin: EventEmitter<any> = new EventEmitter();
   get userid() {
     return this.nameForm.get('userid');
   }
@@ -40,5 +41,11 @@ export class UserDetailComponent {
   }
   newuser(){
     this.router.navigate(['/register']);
+  }
+
+  onClosing(event: any) {
+    event.preventDefault()
+    console.log('click');
+    this.closeLogin.emit()
   }
 }
