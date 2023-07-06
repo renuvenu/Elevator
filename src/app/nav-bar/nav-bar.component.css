@@ -81,6 +81,9 @@
   .menu > li:hover .submenu li:nth-child(odd){
    transform: skewX(-25deg) translateX(-15px);   
   } */
+  .nav-bar-container{
+    padding-bottom: 30px;
+  }
   .example-spacer {
     flex: 1 1 auto;
   }

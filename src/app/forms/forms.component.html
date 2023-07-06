@@ -7,8 +7,12 @@
         </div>
     </div>
     <div class="ButtonFunctions">
-        <button [ngStyle]="{background: alarmBackgroundColour  } " (click)="toggleAlarmSelection()" (click)="updateAlarmStatus()">
+        <button [ngStyle]="{background: alarmBackgroundColour  } " (click)="toggleAlarmSelection()" >
+           
+              
             <mat-icon style="color: red ;">alarm</mat-icon>
+           
+              
         </button>
         <button [ngStyle]="{background: phoneBackgroundColour  } " (click)="togglephoneSelection()">
             <mat-icon style="color: blue;">phone</mat-icon>
@@ -29,3 +33,5 @@
         </button>
     </div>
 </div>
+
+  

@@ -10,6 +10,7 @@ export class FloorsService {
   getFloors() {
     return this.http.get('https://team2-api-naf.azurewebsites.net/api/Floor');
   }
+  
 
   //   addSaving(data: any) {
   //     return this.http.post(

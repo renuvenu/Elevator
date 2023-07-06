@@ -1,9 +1,12 @@
-<form class="user" [formGroup]="nameForm" (ngSubmit)="validateUser()">
+
+<div class="user">
   <div class="content">
     <div class="close">
-     <button mat-button> <mat-icon class="cross-icon"> close</mat-icon></button>
-    </div>
+       <button mat-button (click)="goToLift()"> <mat-icon class="cross-icon"> close</mat-icon> </button>
+      </div>
   </div>
+<form  [formGroup]="nameForm" (ngSubmit)="validateUser()">
+ 
   <mat-form-field class="example-full-width" class="custom-form-field">
     <mat-label>Enter the user Id</mat-label>
     <input
@@ -19,7 +22,7 @@
     </mat-error>
   </mat-form-field>
   <br />
-  <button
+  <button class="submit-button"
     mat-raised-button
     color="primary"
     [disabled]="nameForm.invalid"
@@ -30,3 +33,4 @@
   <br>
   <button mat-button style="color: blue;font-size: small;"(click)=newuser()>New User?</button>
 </form>
+</div>
