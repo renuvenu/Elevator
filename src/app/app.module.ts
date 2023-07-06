@@ -56,7 +56,8 @@ import { WeightLimitExceededPopupComponent } from './weight-limit-exceeded-popup
     HistoryCardComponent,
     InvalidBoxComponent,
     NavBarComponent,
-    WeightLimitExceededPopupComponent
+    WeightLimitExceededPopupComponent,
+   
     
     
   ],

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FloorsService } from '../floorsService.service';
 import { PersonService } from 'src/person.service';
+import { MatDialog } from '@angular/material/dialog';
+import { WeightLimitExceededPopupComponent } from '../weight-limit-exceeded-popup/weight-limit-exceeded-popup.component';
 
 @Component({
   selector: 'app-floors-component',
@@ -22,7 +24,8 @@ export class FloorsComponentComponent {
   id: any
   constructor(
     private floorService: FloorsService,
-    private personService: PersonService
+    private personService: PersonService,
+    private dialog: MatDialog
   ) {}
   ngOnInit() {
     this.getFloors();
@@ -44,6 +47,7 @@ export class FloorsComponentComponent {
         this.showLogin = true;
         this.toFloor = this.fromFloor;
       } else {
+        this.dialog.open(WeightLimitExceededPopupComponent)
         this.showCapacityExceededPopup = true;
       }
     });
