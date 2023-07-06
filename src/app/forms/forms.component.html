@@ -1,7 +1,9 @@
 <div class="forms">
     <div class="floorNumbers">
         <div *ngFor="let item of createRange()">
-            <app-floor-number-button [floorNumber]="item"> </app-floor-number-button>
+            <button mat-raised-button class="button" (click)="onNumberClicked(item)">
+                {{item}}
+            </button>
         </div>
     </div>
     <div class="ButtonFunctions">
