@@ -1,42 +1,12 @@
-<div class="nav-bar-container">
-<mat-toolbar color="primary" >
-    <span>Elevator</span>
-  
-    <span class="example-spacer"></span>
-  
-    <button
-      mat-button
-      (click)="goToLift()"
-      class="example-icon"
-     
-    >
-    Lift
+<div>
+<ul class="menu cf">
+  <li><span class="menu-item" style="transform: skewX(-25deg); ">
+    ELEVATOR
+  </span></li>
 
-    </button>
-  
-    <button
-      mat-button
-      (click)="goToRegister()"
-      class="example-icon"
-    >
-   Register
-    </button>
-    <button
-      mat-button
-      (click)="goToHistory()"
-      class="example-icon"
-     
-    >
-     History
-    </button>
-    <button
-    mat-button
-    (click)="goToAdmin()"
-    class="example-icon"
-   
-  >
-   Admin
-  </button>
-  
-  </mat-toolbar>
+  <li><span class="menu-item" (click)="goToLift()">LIFT</span></li>
+  <li><span class="menu-item" (click)="goToRegister()">Register</span></li>
+  <li><span class="menu-item" (click)="goToHistory()">History</span></li>
+  <li><span class="menu-item" (click)="goToAdmin()">Admin</span></li>
+</ul>
 </div>
