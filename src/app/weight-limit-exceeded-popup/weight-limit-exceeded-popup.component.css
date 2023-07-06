@@ -8,7 +8,7 @@
    
     /* left: 85px; */
     padding: 20px;
-    padding-left: 110px;
+    padding-left: 95px;
 }
 
 .close
@@ -20,5 +20,13 @@
 .id
 {
     padding: 20px;
+    padding-left: 75px;
+    padding-top: 15px;
+
+    font-style: normal;
+    padding: 20px;
     padding-left: 80px;
+    font-weight: bolder;
+    font-size: larger;
+    font-size: larger
 }
