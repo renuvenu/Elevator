@@ -63,7 +63,6 @@ export class FloorsComponentComponent {
   numberClicked(num: Number) {
     this.openDoor = false;
     this.showButtons = false;
-    // setTimeout(() => {
     this.toFloor = num;
     this.reachedDestination = true;
     this.addPersonDetail()
@@ -74,8 +73,6 @@ export class FloorsComponentComponent {
         this.updatePersonStatus()
       },2000)
     }, 1000);
-    
-    // }, 1000);
   }
 
   updateFromFloor(num: Number) {
@@ -109,5 +106,9 @@ export class FloorsComponentComponent {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
+
+  closeLogin(){
+    this.showLogin = false
   }
 }

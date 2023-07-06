@@ -18,5 +18,7 @@
 <ng-container *ngIf="showLogin">
   <app-user-detail
     (toggleVerification)="toggleScreenLogin($event)"
+    (closeLogin)="closeLogin()"
   ></app-user-detail>
 </ng-container>
+<app-weight-limit-exceeded-popup *ngIf="showCapacityExceededPopup"></app-weight-limit-exceeded-popup>

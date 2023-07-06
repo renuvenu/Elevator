@@ -17,7 +17,7 @@ export class AdminComponent {
     console.log(this.adminForm.get('noOfFloors')?.value);
     var floor = this.adminForm.get('noOfFloors')?.value;
     this.http
-      .post(`https://localhost:7160/api/floor/${floor}`,{})
+      .post(`https://team2-api-naf.azurewebsites.net/api/floor/${floor}`,{})
       .subscribe(() => {});
 
     //  console.log("noOfFloors");
