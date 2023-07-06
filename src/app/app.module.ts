@@ -30,6 +30,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserDetailComponent,
     FloorsComponentComponent,
     RegformComponent,
-    PopUpComponent
+    PopUpComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
