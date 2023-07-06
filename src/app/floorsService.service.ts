@@ -8,7 +8,7 @@ export class FloorsService {
   constructor(private http: HttpClient) {}
 
   getFloors() {
-    return this.http.get('https://localhost:7160/api/floor');
+    return this.http.get('https://localhost:7160/api/Floor');
   }
 
   //   addSaving(data: any) {
