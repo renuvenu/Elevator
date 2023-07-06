@@ -20,9 +20,15 @@
 </button>
 
 </form>
-<div class="movie-list-container">
-  <app-history-card
-    *ngFor="let dt of searchResult"
-    [userhistory]="dt"
-  ></app-history-card>
+<div class="container">
+  
+ 
+ 
+  <ng-container *ngFor="let dt of searchHistory ">
+   
+    <app-history-card  [userhistory]="dt" [username]="userName"> </app-history-card>
+  
+  </ng-container>
+
 </div>
+

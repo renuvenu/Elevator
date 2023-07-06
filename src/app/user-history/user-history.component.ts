@@ -10,6 +10,9 @@ import { HttpClient } from '@angular/common/http';
 export class UserHistoryComponent {
   searchForm: FormGroup;
   searchResult: any; 
+  userName:any 
+  searchHistory:any
+  
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.searchForm = this.fb.group({
@@ -25,9 +28,14 @@ export class UserHistoryComponent {
     const userId = this.searchForm.get('userId')?.value;
     if (userId) {
       this.http.get<any[]>(`https://localhost:7160/api/PersonDetailsInLift/user/${userId}`)
-        .subscribe(data => {
-          console.log(data);         
+        .subscribe(data => {       
           this.searchResult = data;
+          this.searchHistory=this.searchResult.personDetails;
+          this.userName=this.searchResult['userName']
+          console.log(this.searchHistory);
+          
+          console.log(this.searchResult);
+          
         });
         
         

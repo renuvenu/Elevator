@@ -15,5 +15,6 @@ export class HistoryCardComponent {
     travelledDateTime:'',
     status:''
    };
+   @Input() username: string = ""
 
 }
