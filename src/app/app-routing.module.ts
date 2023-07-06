@@ -6,6 +6,7 @@ import { RegformComponent } from './regform/regform.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserHistoryComponent } from './user-history/user-history.component';
 import { AdminComponent } from './admin/admin.component';
+import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path:'admin',
     component:AdminComponent
+  },
+  {
+  path:'invalid',
+  component:InvalidBoxComponent
   }
   
 ];

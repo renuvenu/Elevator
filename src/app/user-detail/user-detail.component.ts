@@ -34,10 +34,14 @@ export class UserDetailComponent {
       .subscribe((val) => {
         let user = val;
         this.userDetail = user;
-        if (this.userDetail?.id) {
-          this.toggleVerification.emit(this.nameForm.get('userid')?.value);
-        }
+        
       });
+      if (this.userDetail?.id) {
+        this.toggleVerification.emit(this.nameForm.get('userid')?.value);
+      }
+      else{
+        this.goToInvalid();
+      }
   }
   newuser(){
     this.router.navigate(['/register']);
@@ -47,5 +51,11 @@ export class UserDetailComponent {
     event.preventDefault()
     console.log('click');
     this.closeLogin.emit()
+  }
+  goToInvalid(){
+    this.router.navigate(['/invalid']);
+  }
+  goToLift(){
+    this.router.navigate(['/lift']);
   }
 }
