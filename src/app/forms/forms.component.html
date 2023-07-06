@@ -7,13 +7,14 @@
         </div>
     </div>
     <div class="ButtonFunctions">
-        <button>
+        <button [ngStyle]="{background: alarmBackgroundColour  } " (click)="toggleAlarmSelection()" (click)="updateAlarmStatus()">
             <mat-icon style="color: red ;">alarm</mat-icon>
         </button>
-        <button>
+        <button [ngStyle]="{background: phoneBackgroundColour  } " (click)="togglephoneSelection()">
             <mat-icon style="color: blue;">phone</mat-icon>
         </button>
-        <button style="color: brown;">
+        <button [ngStyle]="{background: nonstopBackgroundColour  } " (click)="togglenonstopSelection()"
+            style="color: rgb(42, 157, 165);">
             Non stop
         </button>
     </div>

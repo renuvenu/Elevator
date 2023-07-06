@@ -30,6 +30,12 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { UserHistoryComponent } from './user-history/user-history.component';
+import { HistoryCardComponent } from './history-card/history-card.component';
+import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +48,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserDetailComponent,
     FloorsComponentComponent,
     RegformComponent,
-    PopUpComponent
+    PopUpComponent,
+    AdminComponent,
+    UserHistoryComponent,
+    HistoryCardComponent,
+    InvalidBoxComponent,
+    NavBarComponent,
+    
   ],
   imports: [
     BrowserModule,

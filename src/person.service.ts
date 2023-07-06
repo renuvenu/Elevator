@@ -8,13 +8,13 @@ export class PersonService {
   constructor(private http: HttpClient) {}
 
   getPersonDetail(id: any) {
-    return this.http.get('https://localhost:7160/login', {
+    return this.http.get('https://team2-api-naf.azurewebsites.net/login', {
       headers: new HttpHeaders({ userId: id }),
     });
   }
 
   verifyCapacity() {
-    return this.http.get('https://localhost:7160/verifyCapacity');
+    return this.http.get('https://team2-api-naf.azurewebsites.net/verifyCapacity');
   }
 
   addPersonDetailInLift(data: any){
