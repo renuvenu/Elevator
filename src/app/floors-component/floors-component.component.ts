@@ -16,8 +16,10 @@ export class FloorsComponentComponent {
   toFloor: Number = 1;
   fromFloor: Number = 1;
   reachedDestination = false;
-  isFull: any;
-  showCapacityExceededPopup = false
+  isAvailable: any;
+  showCapacityExceededPopup = false;
+  data: any
+  id: any
   constructor(
     private floorService: FloorsService,
     private personService: PersonService
@@ -37,14 +39,14 @@ export class FloorsComponentComponent {
   enableLoginScreen(showLogin: boolean) {
     this.personService.verifyCapacity().subscribe((val) => {
       let res = val;
-      this.isFull = res;
+      this.isAvailable = res;
+      if (this.isAvailable) {
+        this.showLogin = true;
+        this.toFloor = this.fromFloor;
+      } else {
+        this.showCapacityExceededPopup = true;
+      }
     });
-    if (this.isFull) {
-      this.showCapacityExceededPopup = true
-    } else {
-      this.showLogin = showLogin;
-      this.toFloor = this.fromFloor;
-    }
   }
 
   toggleScreenLogin(id: string) {
@@ -64,10 +66,48 @@ export class FloorsComponentComponent {
     // setTimeout(() => {
     this.toFloor = num;
     this.reachedDestination = true;
+    this.addPersonDetail()
+    setTimeout(() => {
+      this.openDoor = true;
+      setTimeout(()=>{
+        this.openDoor = false
+        this.updatePersonStatus()
+      },2000)
+    }, 1000);
+    
     // }, 1000);
   }
 
   updateFromFloor(num: Number) {
     this.fromFloor = num;
+  }
+
+  updateFloor(num: Number) {
+    this.toFloor = num;
+  }
+
+  addPersonDetail(){
+    let detail = {
+      personId: this.userId,
+      weight: this.getRandomIntInclusive(50,80),
+      fromFloorNum: this.fromFloor,
+      toFloorNum: this.toFloor,
+      status: "Inprogress"
+    }
+    this.personService.addPersonDetailInLift(detail).subscribe(val => {
+      this.data = val
+      this.id = this.data?.id
+    })
+  }
+
+  updatePersonStatus(){
+    this.personService.updatePersonDetailInLift(this.id,"Completed").subscribe(val => {
+    })
+  }
+
+  getRandomIntInclusive(min: any, max: any) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
   }
 }

@@ -52,9 +52,4 @@ export class RegformComponent {
       data: { userId: userId }
     });
   }
-  
-  
-  
-  
-  
 }

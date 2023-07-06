@@ -14,38 +14,19 @@ import { Router } from '@angular/router';
 })
 export class FloorComponent {
   currentFloor: any;
-  constructor(private router: Router) {}
-  ngOnInit() {
+  constructor(private router: Router) {
+    this.currentFloor = this.floor;
   }
-  // ngDoCheck() {
-    // console.log('CHECK');
-    // console.log(this.currentFloor + ' ' + this.floor);
-
-    // if (this.currentFloor !== this.floor) {
-    //   this.currentFloor = this.floor;
-    //   console.log(this.floor);
-    //   setTimeout(() => {
-    //     this.upLiftButtonClicked(this.floor);
-    //   }, 2000);
-    // }
-    // if(this.reachedDestination){
-    //   this.upLiftButtonClicked(this.floor)
-    // }
-  // }
-  // ngAfterViewInit(){
-  //   if(this.reachedDestination){
-  //       this.upLiftButtonClicked(this.floor)
-  //     }
-  // }
 
   @Input() floornum: Number = 0;
   @Input() lastFloor: Number = 0;
-  @Input() openDoor: Boolean = false; 
+  @Input() openDoor: Boolean = false;
   @Input() reachedDestination: Boolean = false;
-  isOpen = false;
+  // isOpen = false;
   @Output() showLogin: EventEmitter<any> = new EventEmitter();
   @Input() floor: Number = 1;
   @Output() fromFloor: EventEmitter<any> = new EventEmitter();
+  @Output() updateFloor: EventEmitter<any> = new EventEmitter();
 
   generateRandom = (min: any, max: any) =>
     Math.floor(Math.random() * (max - min)) + min;
@@ -54,12 +35,27 @@ export class FloorComponent {
     this.openDoor = !this.openDoor;
   }
   upLiftButtonClicked(num: any) {
+    this.openDoor = false
     this.fromFloor.emit(num);
     var door = <HTMLElement>document.getElementsByClassName('door')[0];
-    door.style.transform = `translateY(-${(num - 1) * 133}px)`;
     door.style.transitionDuration = '2s';
+    if(this.floor<num) {
+      door.style.transform = `translateY(-${(num - 1) * 133}px)`;
+    } else if(this.floor>num) {
+      door.style.transform = `translateY(${(num-1) * 133}px)`;
+    }
+    else {
+      this.toggleLift()
+      setTimeout(()=>{
+        this.toggleLift()
+      },2000)
+    }
+    setTimeout(()=>{
+      this.updateFloor.emit(num)
+    },1000)
     setTimeout(() => {
+      
       this.showLogin.emit(true);
-    }, 2100);
+    },1500);
   }
 }
