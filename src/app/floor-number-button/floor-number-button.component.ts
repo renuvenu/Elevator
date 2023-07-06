@@ -9,6 +9,14 @@ export class FloorNumberButtonComponent {
   constructor() {}
 
   ngOnInit(): void {}
+  colour: string = 'white';
 
   @Input() floorNumber: Number = 1;
+  toggleSelection() {
+    if (this.colour == 'white') {
+      this.colour = 'aqua';
+    } else {
+      this.colour = 'white';
+    }
+  }
 }
