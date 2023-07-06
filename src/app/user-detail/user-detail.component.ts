@@ -35,13 +35,10 @@ export class UserDetailComponent {
         let user = val;
         this.userDetail = user;
         
-      });
+      }); 
       if (this.userDetail?.id) {
         this.toggleVerification.emit(this.nameForm.get('userid')?.value);
-      }
-      else{
-        this.goToInvalid();
-      }
+      }  
   }
   newuser(){
     this.router.navigate(['/register']);
