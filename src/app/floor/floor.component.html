@@ -1,3 +1,40 @@
-<div class="container">
-    
+<div class="lift">
+  {{ floornum }}
+  <div class="container">
+    <div class="door" *ngIf="floornum === floor">
+      <div
+        class="door-left"
+        [ngClass]="{
+          'door-left-transition': isOpen,
+          'door-left-close': !isOpen
+        }"
+      ></div>
+      <div
+        class="door-right"
+        [ngClass]="{
+          'door-right-transition': isOpen,
+          'door-right-close': !isOpen
+        }"
+      ></div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button *ngIf="floornum !== 1" (click)="upLiftButtonClicked(floornum)">
+      <img
+        src="https://img.icons8.com/?size=1x&id=nQMlORqn5a2a&format=png"
+        class="lift-button"
+      />
+    </button>
+    <button
+      *ngIf="floornum !== lastFloor"
+      (click)="upLiftButtonClicked(floornum)"
+    >
+      <img
+        src="https://img.icons8.com/?size=1x&id=nQMlORqn5a2a&format=png"
+        class="lift-button"
+        style="rotate: 180deg"
+      />
+    </button>
+  </div>
 </div>
+<!-- <button (click)="openLift()">open</button> -->
