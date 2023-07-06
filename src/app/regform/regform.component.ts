@@ -46,9 +46,7 @@ export class RegformComponent {
 
         this.values = data;
 
-        const userId1= this.values.userId;  
-
-        console.log(userId1);
+        const userId1= this.values.userId;
 
       });
   }
