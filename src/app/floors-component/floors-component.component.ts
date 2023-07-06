@@ -115,4 +115,12 @@ export class FloorsComponentComponent {
   closeLogin(){
     this.showLogin = false
   }
+
+  openLift(){
+    this.openDoor = true
+  }
+
+  closeLift(){
+    this.openDoor = false
+  }
 }
