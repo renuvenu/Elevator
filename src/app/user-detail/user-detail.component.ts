@@ -15,14 +15,17 @@ import { PersonService } from 'src/person.service';
   styleUrls: ['./user-detail.component.css'],
 })
 export class UserDetailComponent {
- 
-
   buttonColor = 'darkblue';
   nameForm = this.fb.group({
     userid: ['', Validators.required],
   });
   userDetail: any;
-  constructor(private fb: FormBuilder, private personService: PersonService,private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private fb: FormBuilder,
+    private personService: PersonService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
   @Output() toggleVerification: EventEmitter<any> = new EventEmitter();
   @Output() closeLogin: EventEmitter<any> = new EventEmitter();
   get userid() {
@@ -34,25 +37,26 @@ export class UserDetailComponent {
       .subscribe((val) => {
         let user = val;
         this.userDetail = user;
-        
-      }); 
-      if (this.userDetail?.id) {
-        this.toggleVerification.emit(this.nameForm.get('userid')?.value);
-      }  
+        if (this.userDetail?.id) {
+          this.toggleVerification.emit(this.nameForm.get('userid')?.value);
+        } else {
+          this.goToInvalid();
+        }
+      });
   }
-  newuser(){
+  newuser() {
     this.router.navigate(['/register']);
   }
 
   onClosing(event: any) {
-    event.preventDefault()
+    event.preventDefault();
     console.log('click');
-    this.closeLogin.emit()
+    this.closeLogin.emit();
   }
-  goToInvalid(){
+  goToInvalid() {
     this.router.navigate(['/invalid']);
   }
-  goToLift(){
+  goToLift() {
     this.router.navigate(['/lift']);
   }
 }
