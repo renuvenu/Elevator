@@ -4,6 +4,7 @@ import { FloorsComponentComponent } from './floors-component/floors-component.co
 import { FormsComponent } from './forms/forms.component';
 import { RegformComponent } from './regform/regform.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserHistoryComponent } from './user-history/user-history.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: UserDetailComponent
+  },
+  {
+    path:'history',
+    component:UserHistoryComponent
   }
   
 ];

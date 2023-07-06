@@ -8,7 +8,7 @@ export class FloorsService {
   constructor(private http: HttpClient) {}
 
   getFloors() {
-    return this.http.get('https://localhost:7160/api/Floor');
+    return this.http.get('https://team2-api-naf.azurewebsites.net/api/Floor');
   }
 
   //   addSaving(data: any) {

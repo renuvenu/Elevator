@@ -23,7 +23,7 @@
 
 <div class="container">
 
-  <!-- <mat-card class="card">
+  <mat-card class="card">
     <div class="history-container">
         <div class="history-details">
           <p>User ID</p>
@@ -35,7 +35,7 @@
           <p>Status</p>
         </div>
     </div>
-</mat-card> -->
+</mat-card>
   <ng-container *ngFor="let dt of searchHistory ">
    
     <app-history-card  [userhistory]="dt" [username]="userName"> </app-history-card>

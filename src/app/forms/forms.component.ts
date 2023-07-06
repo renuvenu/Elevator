@@ -29,4 +29,7 @@ export class FormsComponent {
   onNumberClicked(num: Number) {
     this.numberPressed.emit(num);
   }
+  updateAlarmStatus(){
+    
+  }
 }
