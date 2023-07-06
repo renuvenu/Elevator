@@ -78,6 +78,9 @@ export class FormsComponent {
 
   constructor(private floorsService: FloorsService, private http: HttpClient) {}
   @Output() numberPressed: EventEmitter<any> = new EventEmitter();
+  @Output() openLift: EventEmitter<any> = new EventEmitter();
+  @Output() closeLift: EventEmitter<any> = new EventEmitter();
+
   ngOnInit() {
     this.floorsService.getFloors().subscribe((val) => {
       let floor = val;
@@ -93,5 +96,13 @@ export class FormsComponent {
 
   onNumberClicked(num: Number) {
     this.numberPressed.emit(num);
+  }
+
+  openDoor(){
+    this.openLift.emit()
+  }
+
+  closeDoor(){
+    this.closeLift.emit()
   }
 }
