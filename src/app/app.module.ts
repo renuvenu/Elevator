@@ -35,6 +35,7 @@ import { UserHistoryComponent } from './user-history/user-history.component';
 import { HistoryCardComponent } from './history-card/history-card.component';
 import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { WeightLimitExceededPopupComponent } from './weight-limit-exceeded-popup/weight-limit-exceeded-popup.component';
 
 
 
@@ -55,6 +56,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HistoryCardComponent,
     InvalidBoxComponent,
     NavBarComponent,
+    WeightLimitExceededPopupComponent
     
     
   ],
