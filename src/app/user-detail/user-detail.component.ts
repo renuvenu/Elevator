@@ -33,14 +33,10 @@ export class UserDetailComponent {
       .subscribe((val) => {
         let user = val;
         this.userDetail = user;
+        if (this.userDetail?.id) {
+          this.toggleVerification.emit(this.nameForm.get('userid')?.value);
+        }
       });
-    console.log(this.userDetail);
-
-    if (this.userDetail?.id) {
-      console.log('in');
-
-      this.toggleVerification.emit(this.nameForm.get('userid')?.value);
-    }
   }
   newuser(){
     this.router.navigate(['/register']);

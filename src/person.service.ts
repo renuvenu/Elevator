@@ -17,6 +17,14 @@ export class PersonService {
     return this.http.get('https://team2-api-naf.azurewebsites.net/verifyCapacity');
   }
 
+  addPersonDetailInLift(data: any){
+    return this.http.post('https://localhost:7160/api/PersonDetailsInLift',data)
+  }
+
+  updatePersonDetailInLift(id:string, status:string){
+    return this.http.put(`https://localhost:7160/api/PersonDetailsInLift/${id}/${status}`,{})
+  }
+
   //   addSaving(data: any) {
   //     return this.http.post(
   //       `https://648c27378620b8bae7ec55df.mockapi.io/savings`,

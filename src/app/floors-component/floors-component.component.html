@@ -8,6 +8,7 @@
       [floor]="toFloor"
       (fromFloor)="updateFromFloor($event)"
       [reachedDestination]="reachedDestination"
+      (updateFloor)="updateFloor($event)"
     ></app-floor>
   </ng-container>
 </div>
@@ -15,5 +16,7 @@
   <app-forms (numberPressed)="numberClicked($event)"></app-forms>
 </ng-container>
 <ng-container *ngIf="showLogin">
-  <app-user-detail (toggleVerification)="toggleScreenLogin($event)"></app-user-detail>
+  <app-user-detail
+    (toggleVerification)="toggleScreenLogin($event)"
+  ></app-user-detail>
 </ng-container>
