@@ -1,0 +1,18 @@
+<form  class="user" [formGroup]="adminForm" (ngSubmit)="onsubmit()">
+
+     
+     <mat-form-field class="example-full-width" class="custom-form-field">
+   
+     <mat-label>Enter the No of Floors</mat-label>
+     <input matInput placeholder="No Of Floors" type="number" class="custom-input"formControlName="noOfFloors" required>
+     <mat-error *ngIf="noOfFloors?.errors?.['required']">
+       This field is required
+     </mat-error>
+   </mat-form-field>
+ <br>
+  <button mat-raised-button color="primary"  [disabled]="adminForm.invalid" >Submit</button>
+  
+ 
+</form>
+    
+ 

@@ -1,5 +1,19 @@
-<div class="floor-container">
-  <ng-container *ngFor="let i of arr">
-    <app-floor [floornum]="i" [lastFloor]="arr[arr.length - 1]"></app-floor>
+<div class="floor-container" *ngIf="!showLogin && !showButtons">
+  <ng-container *ngFor="let i of floors">
+    <app-floor
+      [floornum]="i.floorNum"
+      [lastFloor]="floors[0].floorNum"
+      (showLogin)="enableLoginScreen($event)"
+      [openDoor]="openDoor"
+      [floor]="toFloor"
+      (fromFloor)="updateFromFloor($event)"
+      [reachedDestination]="reachedDestination"
+    ></app-floor>
   </ng-container>
 </div>
+<ng-container *ngIf="showButtons">
+  <app-forms (numberPressed)="numberClicked($event)"></app-forms>
+</ng-container>
+<ng-container *ngIf="showLogin">
+  <app-user-detail (toggleVerification)="toggleScreenLogin($event)"></app-user-detail>
+</ng-container>

@@ -30,7 +30,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
     UserDetailComponent,
     FloorsComponentComponent,
     RegformComponent,
-    PopUpComponent
+    PopUpComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
