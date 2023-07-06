@@ -18,6 +18,8 @@ export class FloorsComponentComponent {
   reachedDestination = false;
   isAvailable: any;
   showCapacityExceededPopup = false;
+  data: any
+  id: any
   constructor(
     private floorService: FloorsService,
     private personService: PersonService
@@ -61,7 +63,6 @@ export class FloorsComponentComponent {
   numberClicked(num: Number) {
     this.openDoor = false;
     this.showButtons = false;
-    // setTimeout(() => {
     this.toFloor = num;
     this.reachedDestination = true;
     this.addPersonDetail()
@@ -72,8 +73,6 @@ export class FloorsComponentComponent {
         this.updatePersonStatus()
       },2000)
     }, 1000);
-    
-    // }, 1000);
   }
 
   updateFromFloor(num: Number) {
@@ -93,11 +92,13 @@ export class FloorsComponentComponent {
       status: "Inprogress"
     }
     this.personService.addPersonDetailInLift(detail).subscribe(val => {
+      this.data = val
+      this.id = this.data?.id
     })
   }
 
   updatePersonStatus(){
-    this.personService.updatePersonDetailInLift(this.userId,"Completed").subscribe(val => {
+    this.personService.updatePersonDetailInLift(this.id,"Completed").subscribe(val => {
     })
   }
 
@@ -105,5 +106,9 @@ export class FloorsComponentComponent {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
+
+  closeLogin(){
+    this.showLogin = false
   }
 }

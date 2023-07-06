@@ -30,7 +30,12 @@ export class UserHistoryComponent {
       this.http.get<any[]>(`https://team2-api-naf.azurewebsites.net/api/PersonDetailsInLift/user/${userId}`)
         .subscribe(data => {       
           this.searchResult = data;
-          this.searchHistory=this.searchResult.personDetails;
+          this.searchHistory=this.searchResult.personDetails.map((history: any) => {
+            return {
+              ...history,
+              travelledDateTime: this.getDateTime(history.travelledDateTime),
+            }
+          });
           this.userName=this.searchResult['userName']
           console.log(this.searchHistory);
           
@@ -40,5 +45,16 @@ export class UserHistoryComponent {
         
         
     }
+  }
+
+  getDateTime(dateTime: string){
+    let arr = dateTime.split(" ")
+    let date = arr[0].split('-').reverse().join('-')
+    let time = new Date(`${arr[0]}T` + arr[1] + 'Z')
+    .toLocaleTimeString('en-US',
+      {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric'}
+    );
+    return date+" "+time
+    
   }
 }
