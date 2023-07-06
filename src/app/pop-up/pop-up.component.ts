@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+// import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 @Component({

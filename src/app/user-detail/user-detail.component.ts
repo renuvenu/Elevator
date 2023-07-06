@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import {
   FormGroup,
   FormControl,
@@ -13,12 +15,14 @@ import { PersonService } from 'src/person.service';
   styleUrls: ['./user-detail.component.css'],
 })
 export class UserDetailComponent {
+ 
+
   buttonColor = 'darkblue';
   nameForm = this.fb.group({
     userid: ['', Validators.required],
   });
   userDetail: any;
-  constructor(private fb: FormBuilder, private personService: PersonService) {}
+  constructor(private fb: FormBuilder, private personService: PersonService,private router: Router, private route: ActivatedRoute) {}
   @Output() toggleVerification: EventEmitter<any> = new EventEmitter();
   get userid() {
     return this.nameForm.get('userid');
@@ -37,5 +41,8 @@ export class UserDetailComponent {
 
       this.toggleVerification.emit(this.nameForm.get('userid')?.value);
     }
+  }
+  newuser(){
+    this.router.navigate(['/register']);
   }
 }

@@ -46,7 +46,7 @@ import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
     FloorsComponentComponent,
     RegformComponent,
     PopUpComponent,
-    AdminComponent
+    AdminComponent,
     InvalidBoxComponent,
     
   ],
