@@ -10,6 +10,36 @@ import { FloorsService } from '../floorsService.service';
 export class FormsComponent {
   floors: any;
   numberOfFloors: number = 0;
+  alarmBackgroundColour: string = 'white';
+
+  toggleAlarmSelection() {
+    if (this.alarmBackgroundColour == 'white') {
+      this.alarmBackgroundColour = 'pink';
+    } else {
+      this.alarmBackgroundColour = 'white';
+    }
+  }
+
+  phoneBackgroundColour: string = 'white';
+
+  togglephoneSelection() {
+    if (this.phoneBackgroundColour == 'white') {
+      this.phoneBackgroundColour = 'lightgreen';
+    } else {
+      this.phoneBackgroundColour = 'white';
+    }
+  }
+
+  nonstopBackgroundColour: string = 'white';
+
+  togglenonstopSelection() {
+    if (this.nonstopBackgroundColour == 'white') {
+      this.nonstopBackgroundColour = 'brown';
+    } else {
+      this.nonstopBackgroundColour = 'white';
+    }
+  }
+
 
   constructor(private floorsService: FloorsService) {}
   @Output() numberPressed: EventEmitter<any> = new EventEmitter();
