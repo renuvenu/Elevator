@@ -31,6 +31,8 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
+import { UserHistoryComponent } from './user-history/user-history.component';
+import { HistoryCardComponent } from './history-card/history-card.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { AdminComponent } from './admin/admin.component';
     FloorsComponentComponent,
     RegformComponent,
     PopUpComponent,
-    AdminComponent
+    AdminComponent,
+    UserHistoryComponent,
+    HistoryCardComponent
   ],
   imports: [
     BrowserModule,
