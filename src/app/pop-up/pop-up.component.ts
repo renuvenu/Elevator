@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+// import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Route, Router } from '@angular/router';

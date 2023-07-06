@@ -33,6 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { UserHistoryComponent } from './user-history/user-history.component';
 import { HistoryCardComponent } from './history-card/history-card.component';
+import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { HistoryCardComponent } from './history-card/history-card.component';
     PopUpComponent,
     AdminComponent,
     UserHistoryComponent,
-    HistoryCardComponent
+    HistoryCardComponent,
+    InvalidBoxComponent,
+    
   ],
   imports: [
     BrowserModule,
