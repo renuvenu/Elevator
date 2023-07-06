@@ -38,6 +38,7 @@ export class UserDetailComponent {
         let user = val;
         this.userDetail = user;
         if (this.userDetail?.id) {
+          // console.log("enter")
           this.toggleVerification.emit(this.nameForm.get('userid')?.value);
         } else {
           this.goToInvalid();
