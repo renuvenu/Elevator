@@ -18,6 +18,8 @@ export class FloorsComponentComponent {
   reachedDestination = false;
   isAvailable: any;
   showCapacityExceededPopup = false;
+  data: any
+  id: any
   constructor(
     private floorService: FloorsService,
     private personService: PersonService
@@ -93,11 +95,13 @@ export class FloorsComponentComponent {
       status: "Inprogress"
     }
     this.personService.addPersonDetailInLift(detail).subscribe(val => {
+      this.data = val
+      this.id = this.data?.id
     })
   }
 
   updatePersonStatus(){
-    this.personService.updatePersonDetailInLift(this.userId,"Completed").subscribe(val => {
+    this.personService.updatePersonDetailInLift(this.id,"Completed").subscribe(val => {
     })
   }
 
