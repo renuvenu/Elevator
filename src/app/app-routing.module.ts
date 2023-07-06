@@ -5,6 +5,7 @@ import { FormsComponent } from './forms/forms.component';
 import { RegformComponent } from './regform/regform.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -27,6 +28,7 @@ const routes: Routes = [
     path: 'login',
     component: UserDetailComponent
   }
+  
 ];
 
 @NgModule({

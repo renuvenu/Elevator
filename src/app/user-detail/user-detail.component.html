@@ -1,7 +1,7 @@
 <form class="user" [formGroup]="nameForm" (ngSubmit)="validateUser()">
   <div class="content">
     <div class="close">
-      <mat-icon class="cross-icon"> close</mat-icon>
+     <button mat-button> <mat-icon class="cross-icon"> close</mat-icon></button>
     </div>
   </div>
   <mat-form-field class="example-full-width" class="custom-form-field">
@@ -27,5 +27,6 @@
   >
     Submit
   </button>
-  <p style="color: blue; font-size: small">New User?</p>
+  <br>
+  <button mat-button style="color: blue;font-size: small;"(click)=newuser()>New User?</button>
 </form>
