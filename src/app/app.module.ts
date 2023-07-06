@@ -37,6 +37,7 @@ import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HistoryCardComponent,
     InvalidBoxComponent,
     NavBarComponent,
+    
     
   ],
   imports: [
