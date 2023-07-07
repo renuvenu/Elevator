@@ -1,45 +1,115 @@
 .history-container {
+
   /* background: orange; */
+
   padding-top:40px;
+
   width: 1200px;
+
   border-radius: 16px;
+
   overflow: auto;
+
   padding: 16px;
 
+
+
+
 }
+
 .history-details{
+
 display: flex;
+
 align-items: center;
+
 justify-content:space-between;
+
 font-size: 23px;
+
 font-family: sans-serif;
+
 font-weight: bold;
+
 }
+
 .card{
-  background-color: rgb(105, 88, 182);
-  color: azure;
+
+  background-color: rgb(102, 102, 242);
+
 width: 80%;
+
 padding-left: 20px;
+
 padding-right: 20px;
+
 overflow:auto;
+
 height: 100%;
+
 margin: 0 auto;
+
 margin-top: 10px;
+
 border-radius: 20px;
+
 box-shadow: 0px 0px 10px 0px #9b9b9b,
+
 0 1px 1px 0 #9b9b9b,
+
 0 1px 3px 0 #9b9b9b;
+
 }
+
+
+
 
 .search-form {
+
     display: flex;
+
     gap: 3px;
+
     flex-direction: column;
+
     max-width: 400px;
+
     padding-bottom:40px;
+
     margin: 0 auto;
+
   }
 
-  
+
+
+
+  .table-div {
+
+   
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+  }
+
+
+
+
+  table {
+
+    width: 80% !important;
+
+    min-width: 80% !important;
+
+    max-width: 80% !important;
+
+    /* margin-left: 16px;
+
+    margin-right: 16px; */
+
+  }
+
  
-  

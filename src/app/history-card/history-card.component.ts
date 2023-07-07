@@ -16,4 +16,5 @@ export class HistoryCardComponent {
     status: '',
   };
   @Input() username: string = '';
+  @Input() officename: string = '';
 }
