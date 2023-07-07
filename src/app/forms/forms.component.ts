@@ -12,6 +12,7 @@ export class FormsComponent {
   numberOfFloors: number = 0;
   alarmBackgroundColour: string = 'white';
 
+  //used for alarm button background color change
   toggleAlarmSelection() {
     if (this.alarmBackgroundColour == 'white') {
       this.alarmBackgroundColour = 'pink';
@@ -22,6 +23,8 @@ export class FormsComponent {
 
   phoneBackgroundColour: string = 'white';
 
+  //used for phone button background color change
+
   togglephoneSelection() {
     if (this.phoneBackgroundColour == 'white') {
       this.phoneBackgroundColour = 'lightgreen';
@@ -31,6 +34,8 @@ export class FormsComponent {
   }
 
   nonstopBackgroundColour: string = 'white';
+
+  //used for non stop button background color change
 
   togglenonstopSelection() {
     if (this.nonstopBackgroundColour == 'white') {

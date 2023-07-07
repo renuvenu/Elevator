@@ -63,7 +63,7 @@ export class FloorsComponentComponent {
   numberClicked(num: Number) {
     this.openDoor = false;
     this.showButtons = false;
-    // setTimeout(() => {
+  
     this.toFloor = num;
     this.reachedDestination = true;
     this.addPersonDetail()
@@ -75,7 +75,7 @@ export class FloorsComponentComponent {
       },2000)
     }, 1000);
     
-    // }, 1000);
+    
   }
 
   updateFromFloor(num: Number) {
@@ -85,7 +85,7 @@ export class FloorsComponentComponent {
   updateFloor(num: Number) {
     this.toFloor = num;
   }
-
+// used for adding person's detail
   addPersonDetail(){
     let detail = {
       personId: this.userId,
@@ -99,7 +99,7 @@ export class FloorsComponentComponent {
       this.id = this.data?.id
     })
   }
-
+//used for updating person status
   updatePersonStatus(){
     this.personService.updatePersonDetailInLift(this.id,"Completed").subscribe(val => {
     })

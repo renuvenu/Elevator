@@ -28,12 +28,16 @@ export class FloorComponent {
   @Output() fromFloor: EventEmitter<any> = new EventEmitter();
   @Output() updateFloor: EventEmitter<any> = new EventEmitter();
 
+  //used for generating random number
   generateRandom = (min: any, max: any) =>
     Math.floor(Math.random() * (max - min)) + min;
 
+  // used for opening and closing door
   toggleLift() {
     this.openDoor = !this.openDoor;
   }
+
+  // used for showing lift moving operation
   upLiftButtonClicked(num: any) {
     this.openDoor = false
     this.fromFloor.emit(num);
