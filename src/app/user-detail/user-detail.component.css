@@ -32,13 +32,15 @@
   .close {
     width: 30px;
     height: 30px;
+    padding-top: 0px;
     border-radius: 50%;
+   
     background-color:rgb(226, 58, 58);
     display: flex;
     align-items: center;
   justify-content: center;
    cursor: pointer;
-   transform: translate(55%, 10%);
+   transform: translate(40%, 0%);
    }
   
   .cross-icon {
@@ -46,7 +48,11 @@
     font-size: 19px;
     transform: translate(25%, -3%);
   }
-
+.submit-button{
+  display:flex;
+  align-items: center;
+  margin: auto;
+}
   
   .content{
     top:0%;
@@ -67,4 +73,13 @@
     margin: 0 auto;
 
   }
+
+  .newuser
+  {
+    display:flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  
   

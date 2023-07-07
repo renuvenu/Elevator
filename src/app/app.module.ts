@@ -38,6 +38,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WeightLimitExceededPopupComponent } from './weight-limit-exceeded-popup/weight-limit-exceeded-popup.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,9 @@ import { WeightLimitExceededPopupComponent } from './weight-limit-exceeded-popup
     HistoryCardComponent,
     InvalidBoxComponent,
     NavBarComponent,
-    WeightLimitExceededPopupComponent
+    WeightLimitExceededPopupComponent,
+   
+    
     
   ],
   imports: [

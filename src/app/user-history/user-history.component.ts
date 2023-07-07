@@ -12,9 +12,11 @@ export class UserHistoryComponent {
   searchResult: any; 
   userName:any 
   searchHistory:any
+  isSearch: boolean=false
   
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
+    
     this.searchForm = this.fb.group({
       userId: ['',Validators.required]
     });
@@ -24,13 +26,20 @@ export class UserHistoryComponent {
   }
 
 
-  searchuserHistory() {
+  searchuserHistory(issearch:boolean) {
+      this.isSearch=issearch;
+     
     const userId = this.searchForm.get('userId')?.value;
     if (userId) {
       this.http.get<any[]>(`https://team2-api-naf.azurewebsites.net/api/PersonDetailsInLift/user/${userId}`)
         .subscribe(data => {       
           this.searchResult = data;
-          this.searchHistory=this.searchResult.personDetails;
+          this.searchHistory=this.searchResult.personDetails.map((history: any) => {
+            return {
+              ...history,
+              travelledDateTime: this.getDateTime(history.travelledDateTime),
+            }
+          });
           this.userName=this.searchResult['userName']
           console.log(this.searchHistory);
           
@@ -40,5 +49,19 @@ export class UserHistoryComponent {
         
         
     }
+    else{
+      console.log("user not found")
+    }
+  }
+
+  getDateTime(dateTime: string){
+    let arr = dateTime.split(" ")
+    let date = arr[0].split('-').reverse().join('-')
+    let time = new Date(`${arr[0]}T` + arr[1] + 'Z')
+    .toLocaleTimeString('en-US',
+      {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric'}
+    );
+    return date+" "+time
+    
   }
 }

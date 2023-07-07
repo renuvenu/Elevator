@@ -1,3 +1,4 @@
+
 <form  class="user" [formGroup]="adminForm" (ngSubmit)="onsubmit()">
 
      
@@ -10,9 +11,10 @@
      </mat-error>
    </mat-form-field>
  <br>
-  <button mat-raised-button color="primary"  [disabled]="adminForm.invalid" >Submit</button>
+  <button mat-raised-button color="primary"  [disabled]="adminForm.invalid" (click)="goToLift()">Submit</button>
   
  
 </form>
+
     
  

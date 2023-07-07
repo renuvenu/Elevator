@@ -7,8 +7,9 @@
 .container {
     width: 130px;
     height: 130px;
-    background-color: rgb(63, 63, 148);
-    border: 2px solid black;
+    
+    background-color: #808080;
+    border: 2px solid #BCAAA4;
     /* transition: transform 4s ease-in-out; */
     /* transform: transform 4s ease-in; */
 
@@ -18,7 +19,7 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-color: gray;
+    background-color:#c8d7d6 ;
     position: relative;
     z-index: 1;
     display: flex;
@@ -28,15 +29,15 @@
 .door-left {
     width: 50%;
     height: 100%;
-    border-right: 1px solid red;
-    background-color: black;
+    border-right: 1px solid #CFD8DC;
+    background-color: #9E9E9E;
 }
 
 .door-right {
     width: 50%;
     height: 100%;
-    border-left: 1px solid red;
-    background-color: black;
+    border-left: 1px solid #CFD8DC;
+    background-color: #9E9E9E;
 }
 
 .door-left-transition {

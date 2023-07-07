@@ -14,20 +14,20 @@
   mat-raised-button
   color="primary"
   type="submit"
-  [disabled]="searchForm.invalid" (click)="searchuserHistory()"
+  [disabled]="searchForm.invalid" (click)="searchuserHistory(true)"
 >
   Search
 </button>
 
 </form>
 
-<div class="container">
+<div class="container" >
 
-  <mat-card class="card">
+  <mat-card class="card" *ngIf="isSearch">
     <div class="history-container">
         <div class="history-details">
-          <p>User ID</p>
-          <p>Name</p>
+          <p>UserID</p>
+          <p>UserName</p>
           <p>Weight</p>
           <p>From</p>
           <p>To</p>
