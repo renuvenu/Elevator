@@ -45,7 +45,6 @@ export class FormsComponent {
   phoneBackgroundColour: string = 'white';
 
   togglephoneSelection() {
-    
     if (this.phoneBackgroundColour == 'white') {
       this.phoneBackgroundColour = 'lightgreen';
     } else {
@@ -99,11 +98,11 @@ export class FormsComponent {
     this.numberPressed.emit(num);
   }
 
-  openDoor(){
-    this.openLift.emit()
+  openDoor() {
+    this.openLift.emit();
   }
 
-  closeDoor(){
-    this.closeLift.emit()
+  closeDoor() {
+    this.closeLift.emit();
   }
 }

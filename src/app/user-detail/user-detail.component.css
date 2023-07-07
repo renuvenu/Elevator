@@ -15,17 +15,9 @@
 }
 
 .custom-button {
-    /* background-color: rgb(79, 0, 139); */
     color: white;
   }
-  /* .custom-input {
-    width: 300px;
-    height: 40px;
-  } */
-  /* .mat-input {
-    width: 30px;
-    height: 10px;
-  } */
+
   .custom-input {
     font-size: 6px;
   }

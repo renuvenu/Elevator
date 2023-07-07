@@ -21,8 +21,7 @@ export class FloorComponent {
   @Input() floornum: Number = 0;
   @Input() lastFloor: Number = 0;
   @Input() openDoor: Boolean = false;
-  @Input() reachedDestination: Boolean = false;
-  // isOpen = false;
+  @Input() reachedDestination: Boolean = false;;
   @Output() showLogin: EventEmitter<any> = new EventEmitter();
   @Input() floor: Number = 1;
   @Output() fromFloor: EventEmitter<any> = new EventEmitter();

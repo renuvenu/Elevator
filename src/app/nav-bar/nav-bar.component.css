@@ -1,74 +1,68 @@
+/* Styling for nav-bar Component */
+
 .cf:before,
-  .cf:after {
-      content: " ";
-      display: table;
-  }
+.cf:after {
+  content: " ";
+  display: table;
+}
 
-  .cf:after {
-      clear: both;
-  }
+.cf:after {
+  clear: both;
+}
 
-  .menu,
-  .submenu {
-   margin: 0;
-   padding: 0;
-   list-style: none;
-  }
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  .menu {   
-   margin: 50px auto;
-   width: 800px;   
-   width: -moz-fit-content;
-   width: -webkit-fit-content;
-   width: fit-content; 
-  }
+.menu {
+  margin: 50px auto;
+  width: 800px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
 
-  .menu > li {
-   background: #000;
-   float: left;
-   position: relative;
-   transform: skewX(25deg);
-  }
+.menu > li {
+  background: #000;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
 
-  .menu-item {
-   display: block;
-   color: #fff;
-   text-transform: uppercase;
-   text-decoration: none;
-   font-family: Arial, Helvetica;
-   font-size: 14px;
-   width: 240px;
-   height:30px
-  }  
+.menu-item {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+  width: 240px;
+  height: 30px;
+  text-align: center;
+}
 
-  .menu li:hover {
-   background: rgb(63, 63, 148);
-  }  
+.menu li:hover {
+  background: rgb(63, 63, 148);
+}
 
-  .menu > li > .menu-item {
-   transform: skewX(-25deg);
-   padding: 1em 2em;
-  }
+.menu > li > .menu-item {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
 
- 
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .menu > li:hover .submenu,
-  .menu > li:hover .submenu li {
-   opacity: 1;
-   visibility: visible;
-  }  
+.menu > li:hover .submenu li:nth-child(even) {
+  transform: skewX(25deg) translateX(15px);
+}
 
-  .menu > li:hover .submenu li:nth-child(even){
-   transform: skewX(25deg) translateX(15px);   
-  }
-
-  .menu > li:hover .submenu li:nth-child(odd){
-   transform: skewX(-25deg) translateX(-15px);   
-  }
-
-  /* .nav-bar-container{
-    padding-bottom: 30px;
-  }
-  .example-spacer {
-    flex: 1 1 auto;
-  } */
+.menu > li:hover .submenu li:nth-child(odd) {
+  transform: skewX(-25deg) translateX(-15px);
+}

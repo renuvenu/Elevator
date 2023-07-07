@@ -20,9 +20,9 @@ export class FloorsComponentComponent {
   reachedDestination = false;
   isAvailable: any;
   showCapacityExceededPopup = false;
-  showInvalidUser = false
-  data: any
-  id: any
+  showInvalidUser = false;
+  data: any;
+  id: any;
   constructor(
     private floorService: FloorsService,
     private personService: PersonService,
@@ -48,15 +48,15 @@ export class FloorsComponentComponent {
         this.showLogin = true;
         this.toFloor = this.fromFloor;
       } else {
-         this.dialog.open(WeightLimitExceededPopupComponent)
+        this.dialog.open(WeightLimitExceededPopupComponent);
         this.showCapacityExceededPopup = true;
       }
     });
   }
 
   toggleScreenLogin(id: string) {
-    console.log('id',id);
-    
+    console.log('id', id);
+
     this.userId = id;
     this.showLogin = false;
     setTimeout(() => {
@@ -67,14 +67,14 @@ export class FloorsComponentComponent {
     }, 1000);
   }
 
-  toggleInvalidPopup(){
-    this.showLogin = false
-    this.showInvalidUser = true
+  toggleInvalidPopup() {
+    this.showLogin = false;
+    this.showInvalidUser = true;
   }
 
-  closeInvalidPopup(){
-    this.showInvalidUser = false
-    this.showLogin = true
+  closeInvalidPopup() {
+    this.showInvalidUser = false;
+    this.showLogin = true;
   }
 
   numberClicked(num: Number) {
@@ -82,13 +82,13 @@ export class FloorsComponentComponent {
     this.showButtons = false;
     this.toFloor = num;
     this.reachedDestination = true;
-    this.addPersonDetail()
+    this.addPersonDetail();
     setTimeout(() => {
       this.openDoor = true;
-      setTimeout(()=>{
-        this.openDoor = false
-        this.updatePersonStatus()
-      },2000)
+      setTimeout(() => {
+        this.openDoor = false;
+        this.updatePersonStatus();
+      }, 2000);
     }, 1000);
   }
 
@@ -100,23 +100,24 @@ export class FloorsComponentComponent {
     this.toFloor = num;
   }
 
-  addPersonDetail(){
+  addPersonDetail() {
     let detail = {
       personId: this.userId,
-      weight: this.getRandomIntInclusive(50,80),
+      weight: this.getRandomIntInclusive(50, 80),
       fromFloorNum: this.fromFloor,
       toFloorNum: this.toFloor,
-      status: "Inprogress"
-    }
-    this.personService.addPersonDetailInLift(detail).subscribe(val => {
-      this.data = val
-      this.id = this.data?.id
-    })
+      status: 'Inprogress',
+    };
+    this.personService.addPersonDetailInLift(detail).subscribe((val) => {
+      this.data = val;
+      this.id = this.data?.id;
+    });
   }
 
-  updatePersonStatus(){
-    this.personService.updatePersonDetailInLift(this.id,"Completed").subscribe(val => {
-    })
+  updatePersonStatus() {
+    this.personService
+      .updatePersonDetailInLift(this.id, 'Completed')
+      .subscribe((val) => {});
   }
 
   getRandomIntInclusive(min: any, max: any) {
@@ -125,15 +126,15 @@ export class FloorsComponentComponent {
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
   }
 
-  closeLogin(){
-    this.showLogin = false
+  closeLogin() {
+    this.showLogin = false;
   }
 
-  openLift(){
-    this.openDoor = true
+  openLift() {
+    this.openDoor = true;
   }
 
-  closeLift(){
-    this.openDoor = false
+  closeLift() {
+    this.openDoor = false;
   }
 }
