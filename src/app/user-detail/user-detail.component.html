@@ -5,7 +5,7 @@
        <button mat-button (click)="goToLift()"> <mat-icon class="cross-icon"> close</mat-icon> </button>
       </div>
   </div>
-<form  [formGroup]="nameForm" (ngSubmit)="validateUser()">
+<form  class="form" [formGroup]="nameForm" (ngSubmit)="validateUser()">
  
   <mat-form-field class="example-full-width" class="custom-form-field">
     <mat-label>Enter the user Id</mat-label>
@@ -18,7 +18,7 @@
       required
     />
     <mat-error *ngIf="userid?.errors?.['required']">
-      This field is required,please fill it!
+      This field is required
     </mat-error>
   </mat-form-field>
   <br />
@@ -31,6 +31,6 @@
     Submit
   </button>
   <br>
-  <button mat-button style="color: blue;font-size: small;"(click)=newuser()>New User?</button>
+  <button class="newuser" mat-button style="color: blue;font-size: small;"(click)=newuser()>New User?</button>
 </form>
 </div>
