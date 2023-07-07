@@ -28,7 +28,7 @@ export class UserHistoryComponent {
 
   searchuserHistory(issearch:boolean) {
       this.isSearch=issearch;
-     console.log(this.isSearch)
+     
     const userId = this.searchForm.get('userId')?.value;
     if (userId) {
       this.http.get<any[]>(`https://team2-api-naf.azurewebsites.net/api/PersonDetailsInLift/user/${userId}`)
@@ -48,6 +48,9 @@ export class UserHistoryComponent {
         });
         
         
+    }
+    else{
+      console.log("user not found")
     }
   }
 
