@@ -7,21 +7,20 @@
       placeholder="Enter user Id to view the History"
       formControlName="userId"
     />
-    <mat-error *ngIf="userid?.errors?.['required']">
-    </mat-error>
+    <mat-error *ngIf="userid?.errors?.['required']"> </mat-error>
   </mat-form-field>
   <button
-  mat-raised-button
-  color="primary"
-  type="submit"
-  [disabled]="searchForm.invalid" (click)="searchuserHistory(true)"
->
-  Search
-</button>
-
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="searchForm.invalid"
+    (click)="searchuserHistory(true)"
+  >
+    Search
+  </button>
 </form>
 
-<div class="container" >
+<!-- <div class="container" >
 
   <mat-card class="card" *ngIf="isSearch">
     <div class="history-container">
@@ -42,5 +41,87 @@
   
   </ng-container>
 
+</div> -->
+
+<!-- <table class="table">
+  <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Weight</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Date&Time</th>
+        <th>Status</th>
+       
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of searchHistory ">
+      <td>{{ user. personId }}</td>
+      <td>{{ userName}}</td>
+      <td>{{ user.weight }}</td>
+      <td>{{ user.fromFloorNum }}</td>
+      <td>{{ user.toFloorNum }}</td>
+      <td>{{ user. travelledDateTime }}</td>
+      <td>{{ user.  status }}</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div class="table-div">
+  <table mat-table [dataSource]="searchHistory" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.personId }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ userName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Office Name">
+      <th mat-header-cell *matHeaderCellDef>Office Name</th>
+      <td mat-cell *matCellDef="let element">{{ officeName }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="From">
+      <th mat-header-cell *matHeaderCellDef>From</th>
+      <td mat-cell *matCellDef="let element">{{ element.fromFloorNum }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="To">
+      <th mat-header-cell *matHeaderCellDef>To</th>
+      <td mat-cell *matCellDef="let element">{{ element.toFloorNum }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Date&Time">
+      <th mat-header-cell *matHeaderCellDef>Date Time</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.travelledDateTime }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </div>
 

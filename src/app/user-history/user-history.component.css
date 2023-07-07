@@ -38,6 +38,22 @@ box-shadow: 0px 0px 10px 0px #9b9b9b,
     margin: 0 auto;
   }
 
+  .table-div {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  table {
+    width: 80% !important;
+    min-width: 80% !important;
+    max-width: 80% !important;
+    /* margin-left: 16px;
+    margin-right: 16px; */
+  }
+  
+
   
  
   
