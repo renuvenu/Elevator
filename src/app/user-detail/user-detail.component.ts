@@ -9,6 +9,7 @@ import {
   FormBuilder,
 } from '@angular/forms';
 import { PersonService } from 'src/person.service';
+import { Observable, catchError, of } from 'rxjs';
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
@@ -28,20 +29,30 @@ export class UserDetailComponent {
   ) {}
   @Output() toggleVerification: EventEmitter<any> = new EventEmitter();
   @Output() closeLogin: EventEmitter<any> = new EventEmitter();
+  @Output() showInvalidPopup: EventEmitter<any> = new EventEmitter();
   get userid() {
     return this.nameForm.get('userid');
   }
+  errorMessage:any
   validateUser() {
     this.personService
-      .getPersonDetail(this.nameForm.get('userid')?.value)
-      .subscribe((val) => {
+      .getPersonDetail(this.nameForm.get('userid')?.value) .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+        this.errorMessage = error.message;
+        this.goToInvalid();
+        console.error('There was an error!', error);
+        return of();
+    }))
+      .subscribe((val: any) => {
+       // console.log(("valid"));
+        
         let user = val;
         this.userDetail = user;
         if (this.userDetail?.id) {
+          console.log(("valid"));
+          
           this.toggleVerification.emit(this.nameForm.get('userid')?.value);
-        } else {
-          this.goToInvalid();
-        }
+        } 
+        
       });
   }
   newuser() {
@@ -54,7 +65,8 @@ export class UserDetailComponent {
     this.closeLogin.emit();
   }
   goToInvalid() {
-    this.router.navigate(['/invalid']);
+    // this.router.navigate(['/invalid']);
+    this.showInvalidPopup.emit()
   }
   goToLift() {
     this.router.navigate(['/lift']);
