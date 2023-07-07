@@ -1,7 +1,5 @@
 
 <form  class="user" [formGroup]="adminForm" (ngSubmit)="onsubmit()">
-
-     
      <mat-form-field class="example-full-width" class="custom-form-field">
    
      <mat-label>Enter the No of Floors</mat-label>
@@ -12,8 +10,6 @@
    </mat-form-field>
  <br>
   <button mat-raised-button color="primary"  [disabled]="adminForm.invalid" (click)="goToLift()">Submit</button>
-  
- 
 </form>
 
     

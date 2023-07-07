@@ -36,6 +36,7 @@ import { HistoryCardComponent } from './history-card/history-card.component';
 import { InvalidBoxComponent } from './invalid-box/invalid-box.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WeightLimitExceededPopupComponent } from './weight-limit-exceeded-popup/weight-limit-exceeded-popup.component';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -69,6 +70,7 @@ import { WeightLimitExceededPopupComponent } from './weight-limit-exceeded-popup
     MatFormFieldModule,
     HttpClientModule,
     MatCardModule,
+    MatTableModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,

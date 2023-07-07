@@ -1,37 +1,33 @@
 <div class="forms">
-    <div class="floorNumbers">
-        <div *ngFor="let item of createRange()">
-            <button mat-raised-button class="button" (click)="onNumberClicked(item)">
-                {{item}}
-            </button>
-        </div>
+  <div class="floorNumbers">
+    <div *ngFor="let item of createRange()">
+      <button mat-raised-button class="button" (click)="onNumberClicked(item)">
+        {{ item }}
+      </button>
     </div>
-    <div class="ButtonFunctions">
-        <button [ngStyle]="{background: alarmBackgroundColour  } " (click)="toggleAlarmSelection()" >
-           
-              
-            <mat-icon style="color: red ;">alarm</mat-icon>
-           
-              
-        </button>
-        <button [ngStyle]="{background: phoneBackgroundColour  } " (click)="togglephoneSelection()">
-            <mat-icon style="color: blue;">phone</mat-icon>
-        </button>
-        <button [ngStyle]="{background: nonstopBackgroundColour  } " (click)="togglenonstopSelection()"
-            style="color: rgb(42, 157, 165);">
-            Non stop
-        </button>
-    </div>
-    <div class="OpenCloseButton">
-        <button (click)="openDoor()">
-            <mat-icon style="color: green;">arrow_left</mat-icon>
-            <mat-icon style="color:green"> arrow_right</mat-icon>
-        </button>
-        <button (click)="closeDoor()">
-            <mat-icon style="color: green;"> arrow_right</mat-icon>
-            <mat-icon style="color: green;">arrow_left</mat-icon>
-        </button>
-    </div>
+  </div>
+  <div class="ButtonFunctions">
+    <button
+      [ngStyle]="{ background: alarmBackgroundColour }"
+      (click)="toggleAlarmSelection()"
+    >
+      <mat-icon style="color: red">alarm</mat-icon>
+    </button>
+    <button
+      [ngStyle]="{ background: phoneBackgroundColour }"
+      (click)="togglephoneSelection()"
+    >
+      <mat-icon style="color: blue">phone</mat-icon>
+    </button>
+  </div>
+  <div class="OpenCloseButton">
+    <button (click)="openDoor()">
+      <mat-icon style="color: green">arrow_left</mat-icon>
+      <mat-icon style="color: green"> arrow_right</mat-icon>
+    </button>
+    <button (click)="closeDoor()">
+      <mat-icon style="color: green"> arrow_right</mat-icon>
+      <mat-icon style="color: green">arrow_left</mat-icon>
+    </button>
+  </div>
 </div>
-
-  
