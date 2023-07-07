@@ -80,7 +80,6 @@ export class FloorsComponentComponent {
   numberClicked(num: Number) {
     this.openDoor = false;
     this.showButtons = false;
-    this.toFloor = num;
     this.reachedDestination = true;
     this.addPersonDetail();
     setTimeout(() => {
@@ -90,6 +89,7 @@ export class FloorsComponentComponent {
         this.updatePersonStatus();
       }, 2000);
     }, 1000);
+
   }
 
   updateFromFloor(num: Number) {

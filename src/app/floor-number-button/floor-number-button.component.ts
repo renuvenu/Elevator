@@ -12,6 +12,7 @@ export class FloorNumberButtonComponent {
   colour: string = 'white';
 
   @Input() floorNumber: Number = 1;
+  //used for selecting and unselecting each button
   toggleSelection() {
     if (this.colour == 'white') {
       this.colour = 'aqua';
