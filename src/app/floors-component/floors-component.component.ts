@@ -20,6 +20,7 @@ export class FloorsComponentComponent {
   reachedDestination = false;
   isAvailable: any;
   showCapacityExceededPopup = false;
+  showInvalidUser = false
   data: any
   id: any
   constructor(
@@ -54,6 +55,8 @@ export class FloorsComponentComponent {
   }
 
   toggleScreenLogin(id: string) {
+    console.log('id',id);
+    
     this.userId = id;
     this.showLogin = false;
     setTimeout(() => {
@@ -64,9 +67,23 @@ export class FloorsComponentComponent {
     }, 1000);
   }
 
+  toggleInvalidPopup(){
+    this.showLogin = false
+    this.showInvalidUser = true
+  }
+
+  closeInvalidPopup(){
+    this.showInvalidUser = false
+    this.showLogin = true
+  }
+
   numberClicked(num: Number) {
     this.openDoor = false;
     this.showButtons = false;
+<<<<<<< HEAD
+  
+=======
+>>>>>>> fb3d24cb80608c9a7144c72e85e08bec9921f096
     this.toFloor = num;
     this.reachedDestination = true;
     this.addPersonDetail()
@@ -77,6 +94,11 @@ export class FloorsComponentComponent {
         this.updatePersonStatus()
       },2000)
     }, 1000);
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> fb3d24cb80608c9a7144c72e85e08bec9921f096
   }
 
   updateFromFloor(num: Number) {
@@ -86,7 +108,7 @@ export class FloorsComponentComponent {
   updateFloor(num: Number) {
     this.toFloor = num;
   }
-
+// used for adding person's detail
   addPersonDetail(){
     let detail = {
       personId: this.userId,
@@ -100,7 +122,7 @@ export class FloorsComponentComponent {
       this.id = this.data?.id
     })
   }
-
+//used for updating person status
   updatePersonStatus(){
     this.personService.updatePersonDetailInLift(this.id,"Completed").subscribe(val => {
     })

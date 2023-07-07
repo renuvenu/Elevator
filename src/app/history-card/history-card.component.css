@@ -4,7 +4,7 @@
         width: 1200px;
         border-radius: 16px;
         overflow: auto;
-        padding: 16px;
+        padding: 8px;
       
   }
   .history-details{
@@ -21,7 +21,7 @@
     width: 80%;
     overflow:auto;
     position: relative;
-    height: 100%;
+    height: 50px;
     margin: 0 auto;
     margin-top: 10px;
     border-radius: 20px;
