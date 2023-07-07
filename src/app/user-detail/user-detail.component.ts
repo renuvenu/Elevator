@@ -50,6 +50,7 @@ export class UserDetailComponent {
         if (this.userDetail?.id) {
           console.log(("valid"));
           
+          // console.log("enter")
           this.toggleVerification.emit(this.nameForm.get('userid')?.value);
         } 
         
