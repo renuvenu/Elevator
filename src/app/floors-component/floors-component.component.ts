@@ -20,6 +20,7 @@ export class FloorsComponentComponent {
   reachedDestination = false;
   isAvailable: any;
   showCapacityExceededPopup = false;
+  showInvalidUser = false
   data: any
   id: any
   constructor(
@@ -54,6 +55,8 @@ export class FloorsComponentComponent {
   }
 
   toggleScreenLogin(id: string) {
+    console.log('id',id);
+    
     this.userId = id;
     this.showLogin = false;
     setTimeout(() => {
@@ -62,6 +65,16 @@ export class FloorsComponentComponent {
         this.showButtons = true;
       }, 1000);
     }, 1000);
+  }
+
+  toggleInvalidPopup(){
+    this.showLogin = false
+    this.showInvalidUser = true
+  }
+
+  closeInvalidPopup(){
+    this.showInvalidUser = false
+    this.showLogin = true
   }
 
   numberClicked(num: Number) {

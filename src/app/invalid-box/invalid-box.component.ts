@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -8,8 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InvalidBoxComponent {
   constructor(private router: Router, private route: ActivatedRoute) { }
-
+  @Output() closeInvalidPopup: EventEmitter<any> = new EventEmitter();
   navigateTouser() {
-    this.router.navigate(['/login']);
+    // this.router.navigate(['/login']);
+    this.closeInvalidPopup.emit()
   }
 }

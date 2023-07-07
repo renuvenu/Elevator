@@ -1,4 +1,4 @@
-<div class="floor-container" *ngIf="!showLogin && !showButtons">
+<div class="floor-container" *ngIf="!showLogin && !showButtons && !showInvalidUser">
   <ng-container *ngFor="let i of floors">
     <app-floor
       [floornum]="i.floorNum"
@@ -22,6 +22,10 @@
   <app-user-detail
     (toggleVerification)="toggleScreenLogin($event)"
     (closeLogin)="closeLogin()"
+    (showInvalidPopup)="toggleInvalidPopup()"
   ></app-user-detail>
+</ng-container>
+<ng-container *ngIf="showInvalidUser">
+  <app-invalid-box (closeInvalidPopup)="closeInvalidPopup()"></app-invalid-box>
 </ng-container>
 <!-- <app-weight-limit-exceeded-popup *ngIf="showCapacityExceededPopup"></app-weight-limit-exceeded-popup> -->
